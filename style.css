@@ -1,0 +1,167 @@
+.card-img {
+  background-color: white;
+}
+.p-2 {
+  color: white;
+  font-size: 30px;
+}
+p {
+  text-align: center;
+}
+
+.card-stuff {
+  font-size: 20px;
+  color: #f7f7f7;
+}
+
+.container {
+  background-color: black;
+  color: #f7f7f7;
+  height: 75px;
+}
+.card-text.forecast {
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #f7f7f7;
+}
+h5 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 3px;
+  text-align: center;
+  color: #f7f7f7;
+}
+.card-title {
+  margin-top: 10px;
+  font-size: 35px;
+  color: #f7f7f7;
+  text-align: center;
+}
+.card-date,
+.card-hour {
+  font-size: 25px;
+  color: #f7f7f7;
+  text-align: center;
+}
+.card-text,
+.units {
+  color: #f7f7f7;
+  font-size: 15px;
+  text-align: center;
+}
+li {
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  background-color: black;
+  font-family: "Prompt", sans-serif;
+}
+.Coded {
+  color: #f7f7f7;
+}
+.card {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 10px;
+  height: 605px;
+}
+.card-img-top {
+  height: 500px;
+}
+
+.btn {
+  background-color: darkgrey;
+  border-color: white;
+  color: black;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar {
+  height: 120px;
+}
+.card-degrees {
+  color: #f7f7f7;
+  font-size: 70px;
+  text-align: center;
+}
+
+a:link {
+  color: #f7f7f7;
+}
+a:visited {
+  color: #f7f7f7;
+}
+a:hover {
+  color: #f7f7f7;
+}
+a:active {
+  color: #c0f0fc;
+}
+.units {
+  color: #f7f7f7;
+}
+.weather-forecast {
+  margin-top: 15px;
+}
+
+.weather-forecast h3 {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  height: 18px;
+  line-height: 15px;
+  padding-top: 10px;
+}
+
+.weather-forecast img {
+  display: block;
+  height: 60px;
+  width: 60px;
+  color: #f7f7f7;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
+}
+.forecastHourly {
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
+}
+.d-flex {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f7f7f7;
+}
+.card {
+  margin: 0 auto;
+  display: block;
+  color: #f7f7f7;
+}
+.card-img {
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+  color: #f7f7f7;
+}
+.icon {
+  display: block;
+  margin: 0 auto;
+}
