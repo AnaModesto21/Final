@@ -103,4 +103,4 @@ function searchLocation(position) {
     let currentLocationBtn = document.querySelector("#btnLocation");
     currentLocationBtn.addEventListener("click", getCurrentLocation);
   }
-      
+}
