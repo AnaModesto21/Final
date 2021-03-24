@@ -25,9 +25,18 @@ function showDate() {
 
     //}
     //showDate();
-    //function formatHours(timestamp) {
-    //    return `
-    //}
+    function formatHours(timestamp) {
+    let day = days[curDate.getDay()];
+      let showDay = document.querySelector("#card-date");
+      showDay.innerHTML = day;
+      let hours = curDate.getHours();
+      if (hours < 10) {
+        hours = `0${hours}`;
+      }
+      let minutes = curDate.getMinutes();
+      if (minutes < 10) {
+        minutes = `0${minutes}`;
+      }
 
     function showCity(event) {
       event.preventDefault();
@@ -63,7 +72,7 @@ function showDate() {
   let forecast = response.data.list[0];
   forecastElement.innerHTML = ` <div class="row">
               <div class="col-sm">
-                <span class="hour">12:00</span><br />
+                <span class="hour">${formatHours(forecast.dt * 1000)}</span><br />
                 <small> <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
                 /></small> <br />
                 <span class="max">${Math.round(forecast.main.temp_max)}º</span><span> | </span>
