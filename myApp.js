@@ -23,8 +23,11 @@ function showDate() {
       let showTime = document.querySelector("#card-hour");
       showTime.innerHTML = `${hours}:${minutes}`;
 
-    }
-    showDate();
+    //}
+    //showDate();
+    //function formatHours(timestamp) {
+    //    return `
+    //}
 
     function showCity(event) {
       event.preventDefault();
@@ -38,21 +41,21 @@ function showDate() {
 
     
     function displayWeather(response) {
-      document.querySelector("#card-title").innerHTML = response.data.name;
-      document.querySelector("#card-degrees").innerHTML = Math.round(
-        response.data.main.temp
-      );
-      document.querySelector("#humidity").innerHTML =
-        response.data.main.humidity;
-      document.querySelector("#windy").innerHTML = Math.round(
-        response.data.wind.speed
-      );
-      document.querySelector("#type-weather").innerHTML =
-        response.data.weather[0].main;
-        
-      iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-    iconElement.setAtrribute("alt", response.data.weather[0].description);
-    
+    let temperatureElement = document.querySelector("#card-degrees");
+    let cityElement = document.querySelector("#card-title");
+    let descriptionElement = document.querySelector("#typeWeather");
+    let humidityElement = document.querySelector("#humidity");
+    let windElement = document.querySelector("#windy");
+    let dateElement = document.querySelector("#card-date");
+    let iconElement = document.querySelector("#icon");
+
+    temperatureElement.innerHTML = Math.round(response.data.main.temp);
+    cityElement.innerHTML = response.data.name;
+    descriptionElement.innerHTML = response.data.weather[0].description;
+    humidityElement.innerHTML = response.data.main.humidity;
+    windElement.innerHTML = Math.round(response.data.wind.speed);
+    dateElement.innerHTML = formatDate(response.data.dt * 1000);
+    iconElement.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     }
 
     function displayForecast(response) {
@@ -61,7 +64,8 @@ function showDate() {
   forecastElement.innerHTML = ` <div class="row">
               <div class="col-sm">
                 <span class="hour">12:00</span><br />
-                <i class="fas fa-cloud-showers-heavy"></i> <br />
+                <small> <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+                /></small> <br />
                 <span class="max">${Math.round(forecast.main.temp_max)}º</span><span> | </span>
                 <span class="min">${Math.round(forecast.main.temp_min)}º</span>
               </div>
@@ -89,9 +93,5 @@ function searchLocation(position) {
 
     let currentLocationBtn = document.querySelector("#btnLocation");
     currentLocationBtn.addEventListener("click", getCurrentLocation);
-
-  
-
-
-
+  }
       
