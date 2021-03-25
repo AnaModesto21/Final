@@ -59,10 +59,11 @@ function displayWeather(response) {
 }
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
+  let forecastElement.innerHTML= null;
   let forecast = null;
 
   for (let index = 0; index < 6; index++) {
-  let forecast = response.data.list[index];
+  let forecast = response.data.daily[index];
 
   forecastElement.innerHTML = ` <div class="row">
               <div class="col-sm">
