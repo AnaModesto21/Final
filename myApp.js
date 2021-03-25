@@ -59,7 +59,11 @@ function displayWeather(response) {
 }
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.list[0];
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+  let forecast = response.data.list[index];
+
   forecastElement.innerHTML = ` <div class="row">
               <div class="col-sm">
                 <span class="hour">${formatHours(
@@ -75,6 +79,7 @@ function displayForecast(response) {
                 <span class="min">${Math.round(forecast.main.temp_min)}º</span>
               </div>
             </div>`;
+}
 }
 function searching(cityName) {
   let key = "68f3915a75420edb9d9f25f95e630a55";
